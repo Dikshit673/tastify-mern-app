@@ -1,9 +1,10 @@
-import BackToTop from '@/components/BackToTop';
-import Footer from '@/components/Footer';
-import Navbar from '@/components/Navbar';
-import ScrollToTop from '@/components/ScrollToTop';
 import { memo } from 'react';
 import { Outlet } from 'react-router';
+
+import Navbar from '@/components/Navbar';
+import Footer from '@/components/Footer';
+import BackToTop from '@/components/BackToTop';
+import ScrollToTop from '@/components/ScrollToTop';
 
 const MainLayout = memo(() => {
   return (

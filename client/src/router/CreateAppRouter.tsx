@@ -2,6 +2,7 @@ import { createBrowserRouter } from 'react-router';
 
 // import { Private, Public } from '@/guards';
 import MainLayout from '@/layouts/MainLayout';
+
 import Page404 from '@/pages/Page404';
 import Error from '@/pages/Error';
 
@@ -9,7 +10,7 @@ import Home from '@/pages/Home';
 import Menu from '@/pages/Menu';
 import Cart from '@/pages/Cart';
 import Login from '@/pages/Login';
-import SignUp from '@/pages/SignUp';
+import Signup from '@/pages/Signup';
 
 // import Profile from '@/pages/Profile';
 
@@ -36,7 +37,7 @@ export const CreateAppRouter = () => {
         },
         {
           path: '/signup',
-          element: <SignUp />,
+          element: <Signup />,
           errorElement: <Error />,
         },
         {
