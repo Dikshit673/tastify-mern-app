@@ -1,6 +1,6 @@
 import { memo } from 'react';
-import { HType1, HType2 } from './ui';
-import { servicesArr } from '@/data';
+import { HType1, HType2 } from '@/components/ui';
+import { ServicesData } from '../data';
 
 const Services = memo(() => {
   return (
@@ -9,7 +9,7 @@ const Services = memo(() => {
         <HType2 hypens='both'>services</HType2>
         <HType1 className='text-center'>Explore our Services</HType1>
         <div className='grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4'>
-          {servicesArr.map((service) => (
+          {ServicesData.map((service) => (
             <div
               key={service.id}
               className='hover:shadow-secondary rounded-lg bg-white p-8 transition-[scale,box-shadow] duration-75 ease-in hover:scale-105'

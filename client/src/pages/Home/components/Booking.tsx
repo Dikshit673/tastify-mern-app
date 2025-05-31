@@ -1,13 +1,12 @@
-import { memo, useCallback, useState } from 'react';
-import { Button, HType1, HType2 } from './ui';
-import { bookingInputsArr } from '@/data';
+import { FormEvent, memo, useCallback, useState } from 'react';
+import { BookingFormStateType } from '@/pages/Home/types';
+import { Button, HType1, HType2, FormPresenter } from '@/components/ui';
 
+import { BookingFormFields } from '../data';
 import DinningTablePic from '@/assets/images/booking/dinning-1.jpeg';
-import { BookingFormType } from '@/types/Booking';
-import { FormPresenter } from './ui';
 
 const Booking = memo(() => {
-  const [bookForm, setBookForm] = useState<BookingFormType>({
+  const [bookForm, setBookForm] = useState<BookingFormStateType>({
     name: '',
     email: '',
     phone: '',
@@ -17,7 +16,7 @@ const Booking = memo(() => {
   });
 
   const handleFormSubmit = useCallback(
-    (e: React.FormEvent<HTMLFormElement>) => {
+    (e: FormEvent<HTMLFormElement>) => {
       e.preventDefault();
       const { name, email, phone, datetime, guests } = bookForm;
       if (!name || !email || !phone || !datetime || !guests) {
@@ -51,7 +50,7 @@ const Booking = memo(() => {
               <form onSubmit={handleFormSubmit}>
                 <FormPresenter
                   formName='booking'
-                  arr={bookingInputsArr}
+                  arr={BookingFormFields}
                   fields={bookForm}
                   setFields={setBookForm}
                 />

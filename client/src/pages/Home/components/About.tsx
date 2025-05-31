@@ -1,5 +1,5 @@
 import { memo } from 'react';
-import { Button, HType1, HType2 } from './ui';
+import { Button, HType1, HType2 } from '@/components/ui';
 
 import RestaurantPic from '@/assets/images/about/restaurant.jpg';
 

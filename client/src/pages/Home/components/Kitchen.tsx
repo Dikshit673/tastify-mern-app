@@ -1,6 +1,6 @@
 import { memo } from 'react';
-import { HType1, HType2, Swiper, SwiperItem } from './ui';
-import { kitchenStaffsArr } from '@/data';
+import { HType1, HType2, Swiper, SwiperItem } from '@/components/ui';
+import { kitchenStaffs } from '../data';
 
 const Kitchen = memo(() => {
   return (
@@ -10,7 +10,7 @@ const Kitchen = memo(() => {
         <HType1 className='text-center'>our staffs </HType1>
         <div className='my-12 flex flex-col gap-8'>
           <Swiper
-            data={kitchenStaffsArr}
+            data={kitchenStaffs}
             ButtonNav={false}
             renderItem={(item) => {
               const { id, name, imgSrc, alt, description, position } = item;

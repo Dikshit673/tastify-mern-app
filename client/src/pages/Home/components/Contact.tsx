@@ -1,8 +1,8 @@
-import { memo, useCallback, useState } from 'react';
-import { Button, HType1, HType2 } from './ui';
-import { contactInputsArr } from '@/data';
-import { ContactFormType } from '@/types/Contact';
-import { FormPresenter } from './ui';
+import { FormEvent, memo, useCallback, useState } from 'react';
+import { ContactFormType } from '@/pages/Home/types';
+import { Button, HType1, HType2, FormPresenter } from '@/components/ui';
+
+import { ContactFormFields } from '../data';
 
 const Contact = memo(() => {
   const [contactForm, setContactForm] = useState<ContactFormType>({
@@ -13,7 +13,7 @@ const Contact = memo(() => {
   });
 
   const handleFormSubmit = useCallback(
-    (e: React.FormEvent<HTMLFormElement>) => {
+    (e: FormEvent<HTMLFormElement>) => {
       e.preventDefault();
       const { name, email, subject, message } = contactForm;
       if (!name || !email || !subject || !message) {
@@ -79,7 +79,7 @@ const Contact = memo(() => {
               <form onSubmit={handleFormSubmit}>
                 <FormPresenter
                   formName='contact'
-                  arr={contactInputsArr}
+                  arr={ContactFormFields}
                   fields={contactForm}
                   setFields={setContactForm}
                 />

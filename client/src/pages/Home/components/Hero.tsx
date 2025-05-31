@@ -1,5 +1,5 @@
 import { memo, useEffect, useMemo, useState } from 'react';
-import { Button, HType1 } from './ui';
+import { Button, HType1 } from '@/components/ui';
 
 import HeroPng from '@/assets/images/hero/pic-1.jpg';
 import Thali1 from '@/assets/images/hero/thali-1.png';
