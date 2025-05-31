@@ -1,15 +1,6 @@
-// import testProfilePict from '@/assets/images/testimonials/user-1.jpg';
+import { TestimonialsArrItemType } from '../types';
 
-export type TestimonialItemType = {
-  id: number;
-  name: string;
-  profession: string;
-  rating: number;
-  imgSrc: string;
-  description: string;
-};
-
-const testimonialArr: TestimonialItemType[] = [
+export const TestimonialsData: TestimonialsArrItemType[] = [
   {
     id: 0,
     name: 'john doe',
@@ -191,5 +182,3 @@ const testimonialArr: TestimonialItemType[] = [
       'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque fugiat vel illum possimus aspernatur expedita adipisci placeat incidunt unde dignissimos.',
   },
 ];
-
-export { testimonialArr };

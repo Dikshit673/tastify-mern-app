@@ -1,4 +1,3 @@
-import { JSX } from 'react';
 import {
   FaCartPlus,
   FaHeadset,
@@ -6,15 +5,9 @@ import {
   FaUserTie,
   FaUtensils,
 } from 'react-icons/fa';
+import { ServicesArrItemType } from '../types';
 
-type ServiceType = {
-  id: number;
-  icon: JSX.Element;
-  title: string;
-  description: string;
-};
-
-const servicesArr: ServiceType[] = [
+export const ServicesData: ServicesArrItemType[] = [
   {
     id: 1,
     icon: <FaUserTie />,
@@ -51,5 +44,3 @@ const servicesArr: ServiceType[] = [
       'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eveniet, nisi!',
   },
 ];
-
-export { servicesArr };

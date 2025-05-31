@@ -1,13 +1,13 @@
-import { BookingFormKeysType } from '@/types/Booking';
+import { BookingFormKeysType } from '@/pages/Home/types';
 import { InputItemType, InputTagType, InputType } from '@/types/Input';
 
-interface BookingItemType extends InputItemType {
+interface BookingArrItemType extends InputItemType {
   type: InputType;
   name: BookingFormKeysType;
   isInput?: InputTagType;
 }
 
-const bookingInputsArr: BookingItemType[] = [
+export const BookingFormFields: BookingArrItemType[] = [
   {
     id: 'field-1',
     type: 'text',
@@ -58,5 +58,3 @@ const bookingInputsArr: BookingItemType[] = [
     isInput: 'textarea',
   },
 ];
-
-export { bookingInputsArr };

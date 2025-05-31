@@ -1,13 +1,6 @@
-interface kitchenStaffsItemType {
-  id: number;
-  name: string;
-  imgSrc: string;
-  alt: string;
-  description: string;
-  position: string;
-}
+import { KitchenStaffsArrItemType } from '../types';
 
-const kitchenStaffsArr: kitchenStaffsItemType[] = [
+export const kitchenStaffs: KitchenStaffsArrItemType[] = [
   {
     id: 1,
     name: 'david miller',
@@ -81,5 +74,3 @@ const kitchenStaffsArr: kitchenStaffsItemType[] = [
     position: 'food supervisor',
   },
 ];
-
-export { kitchenStaffsArr };

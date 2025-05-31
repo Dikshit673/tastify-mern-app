@@ -1,4 +1,4 @@
-import { ContactFormKeysType } from '@/types/Contact';
+import { ContactFormKeysType } from '@/pages/Home/types';
 import { InputItemType, InputTagType, InputType } from '@/types/Input';
 
 interface ContactItemType extends InputItemType {
@@ -7,7 +7,7 @@ interface ContactItemType extends InputItemType {
   isInput?: InputTagType;
 }
 
-const contactInputsArr: ContactItemType[] = [
+export const ContactFormFields: ContactItemType[] = [
   {
     id: 'field-1',
     type: 'text',
@@ -42,5 +42,3 @@ const contactInputsArr: ContactItemType[] = [
     isInput: 'textarea',
   },
 ];
-
-export { contactInputsArr };
