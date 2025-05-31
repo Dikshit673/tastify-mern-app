@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import 'tailwindcss';
+
+@theme {
+  /* colors */
+  --color-prime-100: #fea116;
+  --color-prime-200: rgba(2, 214, 2, 1);
+  --color-prime-300: #f1f5fd;
+  --color-prime-400: #0f172b;
+  --color-prime-500: rgba(0, 0, 0, 0.08);
+
+  /* font family */
+  --font-nunito: 'Nunito', sans-serif;
+  --font-cursive: 'Pacifico', cursive;
+
+  /* shadows */
+  --shadow-primary: 0 2px 3rem 1rem rgba(0, 0, 0, 0.08);
+  --shadow-secondary: 0 0 3rem 1rem rgba(0, 0, 0, 0.08);
+
+  /* animation */
+  --animate-rotate: rotate 50s linear 0s infinite normal;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+body,
+header,
+main,
+footer {
+  @apply w-full overflow-x-hidden;
+}
+
+/* scrollbar css */
+::-webkit-scrollbar {
+  @apply w-2.5 touch-pinch-zoom;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-prime-400 rounded-md;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-prime-100 rounded-md;
+}
