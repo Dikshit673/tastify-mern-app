@@ -21,7 +21,8 @@ export const MenuItem = memo(({ item }: MenuItemProps) => {
   return (
     <div className='group hover:shadow-secondary hover:border-prime-100 rounded-lg border border-transparent bg-white transition-[scale,box-shadow] duration-75 ease-in'>
       <figure className='h-40 w-full overflow-hidden rounded-t-lg'>
-        <img
+        <img 
+          loading='lazy' 
           src={imgSrc}
           alt={imgAlt}
           className='size-full rounded-t-lg object-cover transition-transform duration-150 ease-in group-hover:scale-110'

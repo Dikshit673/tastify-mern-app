@@ -30,7 +30,7 @@ const TestimonialItem = memo(({ item }: TestimonialItemProps) => {
     <SwiperItem className='w-65'>
       <div className='flex flex-col items-center gap-2 px-4 py-6 text-center'>
         <figure className='my-4 size-22 overflow-hidden rounded-full'>
-          <img src={imgSrc} alt={name} className='size-full object-cover' />
+          <img loading='lazy' src={imgSrc} alt={name} className='size-full object-cover' />
         </figure>
         <p className='mb-4 text-sm'>{description}</p>
         <div className='flex flex-col gap-0.5'>

@@ -17,7 +17,8 @@ const Kitchen = memo(() => {
               return (
                 <SwiperItem key={id} className='group w-80'>
                   <figure className='overflow-hidden rounded-t-lg'>
-                    <img
+                    <img 
+                      loading='lazy' 
                       src={imgSrc}
                       alt={alt}
                       className='aspect-square size-full rounded-t-lg object-cover transition-transform duration-150 ease-in group-hover:scale-110'

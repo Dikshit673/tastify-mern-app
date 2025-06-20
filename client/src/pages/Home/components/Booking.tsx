@@ -36,7 +36,8 @@ const Booking = memo(() => {
         <HType1 className='text-center'>book a table online</HType1>
         <div className='grid grid-cols-1 gap-8 md:grid-cols-2'>
           <div className='shadow-primary h-full rounded-lg bg-white'>
-            <img
+            <img 
+              loading='lazy' 
               src={DinningTablePic}
               alt='reservation'
               className='h-full w-full rounded-lg object-cover'

@@ -58,7 +58,7 @@ export const CartItem = memo(({ item }: CartItemProps) => {
     <div className='flex items-stretch justify-between border-b border-dotted border-b-gray-500 py-2'>
       <div className='flex gap-4'>
         <figure className='h-20 w-30 overflow-hidden rounded-lg'>
-          <img src={imgSrc} alt={imgAlt} className='size-full object-cover' />
+          <img loading='lazy' src={imgSrc} alt={imgAlt} className='size-full object-cover' />
         </figure>
         <div className='space-y-1'>
           <div>

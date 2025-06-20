@@ -18,7 +18,8 @@ const Hero = memo(() => {
 
   const ImgTag = useMemo(() => {
     return (
-      <img
+      <img 
+        loading='lazy'
         src={heroImg}
         alt='Thali-pic'
         className='animate-rotate size-80 object-cover lg:size-100'
