@@ -47,7 +47,7 @@ footer {
 }
 
 ::-webkit-scrollbar-track {
-  @apply bg-prime-400 rounded-md;
+  @apply bg-prime-400;
 }
 
 ::-webkit-scrollbar-thumb {
