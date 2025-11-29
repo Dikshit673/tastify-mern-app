@@ -26,15 +26,7 @@ const FormPresenter = <T extends Record<string, string>>({
   setFields,
 }: FormPresenterProps<T>) => {
   const handleInputChange = useCallback(
-    (e: ChangeEvent<HTMLInputElement>) => {
-      const { name, value } = e.target;
-      setFields((prev) => ({ ...prev, [name]: value }));
-    },
-    [setFields]
-  );
-
-  const handleTextAreaChange = useCallback(
-    (e: ChangeEvent<HTMLTextAreaElement>) => {
+    (e: ChangeEvent<HTMLInputElement|HTMLTextAreaElement>) => {
       const { name, value } = e.target;
       setFields((prev) => ({ ...prev, [name]: value }));
     },
@@ -63,7 +55,7 @@ const FormPresenter = <T extends Record<string, string>>({
               placeholder={placeholder}
               required={required}
               value={fields[name] ?? ''}
-              handleChange={handleTextAreaChange}
+              handleChange={handleInputChange}
             />
           ) : (
             <Input

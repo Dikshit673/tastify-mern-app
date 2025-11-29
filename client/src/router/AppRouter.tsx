@@ -1,4 +1,4 @@
-import { createBrowserRouter } from 'react-router';
+import { createBrowserRouter, RouterProvider } from 'react-router';
 
 // import { Private, Public } from '@/guards';
 import MainLayout from '@/layouts/MainLayout';
@@ -14,8 +14,7 @@ import Signup from '@/pages/Signup';
 
 // import Profile from '@/pages/Profile';
 
-export const CreateAppRouter = () => {
-  return createBrowserRouter([
+const router =createBrowserRouter([
     {
       element: <MainLayout />,
       errorElement: <Error />,
@@ -90,6 +89,12 @@ export const CreateAppRouter = () => {
       //   ],
     },
   ]);
-};
 
-export default CreateAppRouter;
+
+const AppRouter=()=>{
+  return(
+    <RouterProvider router={router} />
+  )
+}
+
+export default AppRouter;
